@@ -15,3 +15,4 @@ Contains the following plugins:
 9. none-ls (Linters, Formatters)
 10. nvim-cmp, luaSnip, cmp.luaSNip, friendly-snippets, cmp-nvim-lsp (completion and snippets)
 11. nvim-ufo (folding)
+12. vim-tmux-navigator (navigation)
