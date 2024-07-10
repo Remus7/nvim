@@ -43,17 +43,27 @@ return {
       m = { name = "Mason" },
 
 			g = { f = { name = "format" }, },
-			c = { a = { name = "code actions - LSP" }, },
+
+			c = {
+        name = "code",
+        a = { name = "code actions (LSP)" },
+      },
+      z = {
+        name = "folds",
+      },
+      x = {
+        name = "Trouble"
+      },
 		}, { prefix = "<leader>" })
     wk.register({ name = "find files" }, { prefix = "<leader><space>"})
 
 		wk.register({
 			K = {
-				name = "documentation - LSP",
+				name = "documentation (LSP)",
 			},
 			g = {
 				name = "go to",
-				d = { name = "definition - LSP" },
+				d = { name = "definition (LSP)" },
 			},
 		})
 

@@ -16,3 +16,5 @@ Contains the following plugins:
 10. nvim-cmp, luaSnip, cmp.luaSNip, friendly-snippets, cmp-nvim-lsp (completion and snippets)
 11. nvim-ufo (folding)
 12. vim-tmux-navigator (navigation)
+13. trouble.nvim (diagnostics centralisation)
+14. autoclose.nvim (simpler autopairs)
