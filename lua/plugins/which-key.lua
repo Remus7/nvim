@@ -37,18 +37,13 @@ return {
 				g = { name = "grep files" },
 			},
 
-			o = {
-				name = "open",
-			},
+			o = { name = "open", },
 
-			g = {
-				f = { name = "format" },
-			},
+      l = { name = "Lazy" },
+      m = { name = "Mason" },
 
-			c = {
-				a = { name = "code actions - LSP" },
-			},
-
+			g = { f = { name = "format" }, },
+			c = { a = { name = "code actions - LSP" }, },
 		}, { prefix = "<leader>" })
     wk.register({ name = "find files" }, { prefix = "<leader><space>"})
 
