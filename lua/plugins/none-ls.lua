@@ -1,19 +1,23 @@
 return {
 	"nvimtools/none-ls.nvim",
-  dependencies = {
-    "nvimtools/none-ls-extras.nvim"
-  },
+	dependencies = {
+		"nvimtools/none-ls-extras.nvim",
+	},
 
 	config = function()
 		local null_ls = require("null-ls")
 		null_ls.setup({
 			sources = {
-        -- lua
+				-- lua
 				null_ls.builtins.formatting.stylua,
 
-        -- javascript
-				null_ls.builtins.formatting.prettier,
-        require("none-ls.diagnostics.eslint_d"),
+				-- javascript
+				null_ls.builtins.formatting.prettier.with({
+					extra_args = {
+						"--print-width=120",
+					},
+				}),
+				require("none-ls.diagnostics.eslint_d"),
 			},
 		})
 
