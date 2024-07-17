@@ -45,4 +45,39 @@ return {
 			)
 		end,
 	},
+	{
+		"https://gitlab.com/schrieveslaach/sonarlint.nvim",
+
+		ft = { "python", "typescript", "typescriptreact", "typescript.tsx" },
+		dependencies = {
+			"mfussenegger/nvim-jdtls",
+		},
+		config = function()
+			require("sonarlint").setup({
+				server = {
+					cmd = {
+						"java",
+						"-cp",
+						".:/home/carei/.config/nvim/sonarlint/*",
+						"-jar",
+						"/home/carei/.config/nvim/sonarlint/sonarlint-server.jar",
+						-- Ensure that sonarlint-language-server uses stdio channel
+						"-stdio",
+						"-analyzers",
+						-- paths to the analyzers you need, using those for python and java in this example
+						"/home/carei/.config/nvim/sonarlint/sonarpython.jar",
+						"/home/carei/.config/nvim/sonarlint/sonarjs.jar",
+						"/home/carei/.config/nvim/sonarlint/sonartext.jar",
+						"/home/carei/.config/nvim/sonarlint/sonarlint/sonarhtml.jar",
+					},
+				},
+				filetypes = {
+					"python",
+					"typescript",
+					"typescriptreact",
+					"typescript.tsx",
+				},
+			})
+		end,
+	},
 }
