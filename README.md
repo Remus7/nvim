@@ -18,3 +18,6 @@ Contains the following plugins:
 12. vim-tmux-navigator (navigation)
 13. trouble.nvim (diagnostics centralisation)
 14. autoclose.nvim (simpler autopairs)
+14. undotree (undo history)
+
+15. sonarlint (additional LSP) 

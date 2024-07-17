@@ -5,5 +5,6 @@ vim.cmd("set shiftwidth=2")
 
 vim.g.mapleader = " "
 vim.wo.relativenumber = true
+vim.o.undofile = true
 
 vim.cmd("set clipboard=unnamedplus")

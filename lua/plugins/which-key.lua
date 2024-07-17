@@ -1,6 +1,9 @@
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
+	dependencies = {
+		"echasnovski/mini.icons",
+	},
 	init = function()
 		vim.o.timeout = true
 		vim.o.timeoutlen = 300
@@ -30,43 +33,28 @@ return {
 
 	config = function()
 		local wk = require("which-key")
-		wk.register({
-			f = {
-				name = "find",
-				f = { name = "find files" },
-				g = { name = "grep files" },
-			},
+		wk.add({ "<leader><space>", group = "find files" })
 
-			o = { name = "open", },
-
-      l = { name = "Lazy" },
-      m = { name = "Mason" },
-
-			g = { f = { name = "format" }, },
-
-			c = {
-        name = "code",
-        a = { name = "code actions (LSP)" },
-      },
-      z = {
-        name = "folds",
-      },
-      x = {
-        name = "Trouble"
-      },
-		}, { prefix = "<leader>" })
-    wk.register({ name = "find files" }, { prefix = "<leader><space>"})
-
-		wk.register({
-			K = {
-				name = "documentation (LSP)",
-			},
-			g = {
-				name = "go to",
-				d = { name = "definition (LSP)" },
-			},
+		wk.add({
+			{ "<leader>c", group = "code" },
+			{ "<leader>ca", group = "code actions (LSP)" },
+			{ "<leader>f", group = "find" },
+			{ "<leader>ff", group = "find files" },
+			{ "<leader>fg", group = "grep files" },
+			{ "<leader>gf", group = "format" },
+			{ "<leader>l", group = "Lazy" },
+			{ "<leader>m", group = "Mason" },
+			{ "<leader>o", group = "open" },
+			{ "<leader>u", group = "Undotree" },
+			{ "<leader>x", group = "Trouble" },
+			{ "<leader>z", group = "folds" },
 		})
 
-		wk.register(mappings, opts)
+		wk.add({
+			{ "K", group = "documentation (LSP)" },
+			{ "g", group = "go to" },
+			{ "gd", group = "definition (LSP)" },
+		})
+
 	end,
 }
